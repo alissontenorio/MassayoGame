@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=1]
+[ext_resource path="res://World/Orelhão Tras.png" type="Texture" id=2]
+[ext_resource path="res://World/Orelhão Frente.png" type="Texture" id=3]
+[ext_resource path="res://World/Orelhão Poste.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.81524, 3.87012 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6.54751, 1.96152 )
+
+[node name="Orelhao" type="YSort"]
+
+[node name="Orelhao Frente" type="Sprite" parent="."]
+position = Vector2( -2.88906, 0.793697 )
+texture = ExtResource( 3 )
+offset = Vector2( -3, -18 )
+
+[node name="Orelhao Tras" type="Sprite" parent="."]
+position = Vector2( -5.87606, -7.2063 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -10 )
+
+[node name="Sombra Orelhao" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Poste" type="Sprite" parent="."]
+position = Vector2( -0.496063, 0.793697 )
+texture = ExtResource( 4 )
+offset = Vector2( -5.4, -18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0.0658717, -3.76123 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -4.30138, -10.962 )
+rotation = 3.14159
+shape = SubResource( 2 )
+one_way_collision = true
+__meta__ = {
+"_edit_lock_": true
+}

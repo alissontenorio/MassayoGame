@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Action RPG"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Cena 1.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+PlayerStats="*res://Player/Player Stats.tscn"
 
 [display]
 
@@ -99,6 +103,7 @@ roll={
 2d_physics/layer_3="PlayerHurtbox"
 2d_physics/layer_4="EnemyHurtbox"
 2d_physics/layer_5="Enemy"
+2d_physics/layer_6="SoftCollisions"
 
 [rendering]
 
